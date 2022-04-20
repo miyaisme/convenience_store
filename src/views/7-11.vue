@@ -9,6 +9,11 @@
             {{ city }}
           </option>
         </select>
+        <br>
+        <input type="checkbox" name="wifi" id="isWifi" v-model="selectedWifi"><font-awesome-icon icon="fa-solid fa-wifi" /><label for="isWifi"> WIFI</label>
+        <input type="checkbox" name="atm" id="isAtm" v-model="selectedAtm"><font-awesome-icon icon="fa-solid fa-money-check" /><label for="isAtm"> ATM</label>
+        <input type="checkbox" name="coffee" id="isCoffee" v-model="selectedCoffee"><font-awesome-icon icon="fa-solid fa-coffee" /><label for="isCoffee"> Coffee</label>
+        <input type="checkbox" name="icecream" id="isIceCream" v-model="selectedIceCream"><font-awesome-icon icon="fa-solid fa-ice-cream" /><label for="isIceCream"> Ice Cream</label>
       </div>
     </div>
     <div class="store-content">
@@ -18,6 +23,7 @@
             <th scope="col">店名</th>
             <th scope="col">地址</th>
             <th scope="col">電話</th>
+            <th scope="col">附設服務</th>
           </tr>
         </thead>
         <tbody>
@@ -25,6 +31,10 @@
             <td>{{ store.POIName }}</td>
             <td>{{ store.Address }}</td>
             <td>{{ store.Telno }}</td>
+            <td>{{ store.is7WiFi }}</td>
+            <td>{{ store.isATM }}</td>
+            <td>{{ store.isCityCafe }}</td>
+            <td>{{ store.isIceCream }}</td>
           </tr>
         </tbody>
       </table>
@@ -129,6 +139,10 @@ export default {
       selectedCity: "all",
       cities: [],
       stores: [],
+      selectedWifi: "false",
+      selectedAtm: "false",
+      selectedCoffee: "false",
+      selectedIceCream: "false",
     };
   },
   methods: {

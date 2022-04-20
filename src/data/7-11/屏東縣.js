@@ -1798,7 +1798,7 @@ const PingtungCounty = {
             "isMuji": "N",
             "isMisterDonuts": "N",
             "SpecialStore_Kind": "全台最南",
-            "Store_URL": "http:\/\/blog.7-11.com.tw\/diary.aspx?id=21"
+            "Store_URL": ""
         },
         {
             "POIID": 128678,
